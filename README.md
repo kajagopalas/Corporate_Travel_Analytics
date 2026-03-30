@@ -31,7 +31,12 @@ This project highlights the technical evolution of a data model to meet modern a
 - Employee_Name  
 - Department  
 - Title  
-- Region  
+-Region
+
+**Vendors**
+-Vendor_ID
+-Vendor_Name
+-Vendor_Type
 
 **Trips**  
 - Trip_ID  
@@ -47,10 +52,11 @@ This project highlights the technical evolution of a data model to meet modern a
 - Currency  
 - Booking_Channel  
 
+
 **Relationships**:  
 - **Clients → Trips** via Client_ID  
 - **Employees → Trips** via Employee_ID  
-
+- **endors → Trips** via Vendor_ID
 ---
 
 ## Key Technical Features  
