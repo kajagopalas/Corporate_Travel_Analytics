@@ -1,0 +1,35 @@
+Create Database Corporate_Travel_Analytics
+Use Corporate_Travel_Analytics
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create Table Employees (
+Employee_ID Varchar(20) Primary Key,
+Employee_Name Varchar(30),
+Department Varchar(20),
+Title Varchar(20),
+Region Varchar(20))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create Table Clients (
+Client_ID Varchar(20) Primary Key,
+Client_Name Varchar(20),
+Industry Varchar(20),
+Account_Manager Varchar(20))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create Table Vendors (
+Vendor_ID Varchar(20) Primary Key,
+Vendor_Name Varchar(20),
+Vendor_Type Varchar(20))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Create Table Trips (
+Trip_ID Varchar(20) Primary Key,
+Booking_Date Date,
+Travel_Date Date,
+Employee_ID Varchar(20) foreign key references Employees (Employee_ID),
+Client_ID Varchar(20) foreign key references Clients (Client_ID),
+Vendor_ID Varchar(20) foreign key references Vendors(Vendor_ID),
+Travel_Type Varchar(20),
+Origin Varchar(20),
+Destination Varchar(20),
+Cost int,
+Currency Varchar(20),
+Booking_Channel Varchar(20))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
